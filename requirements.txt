@@ -1,0 +1,4 @@
+rasa
+faskapi
+langchain
+uvicorn

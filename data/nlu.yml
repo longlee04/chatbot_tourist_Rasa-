@@ -1,0 +1,360 @@
+version: "2.0"
+nlu:
+- intent: ask_cantho
+  examples: |
+    - tôi muốn du lịch ở Cần Thơ
+    - đi chơi ở Cần Thơ
+    - đi du lịch ở Cần Thơ
+    - Cần Thơ có những địa điểm du lịch nổi tiếng nào
+    - Nên đi du lịch Cần Thơ vào mùa nào
+    - Cần Thơ có những khu du lịch sinh thái nào
+    - Kinh nghiệm du lịch Cần Thơ tự túc là gì
+    - Những hoạt động giải trí thú vị khi du lịch ở Cần Thơ là gì
+    - Cần Thơ có những di tích lịch sử nào nổi bật
+    - Đi du lịch Cần Thơ trong 2 ngày nên ghé thăm những đâu
+    - Cần chuẩn bị gì khi đi du lịch ở Cần Thơ
+
+
+- intent: ask_tour
+  examples: |
+    - tôi muốn tìm tour du lịch ở Cần Thơ 
+    - ở Cần Thơ có các tour du lịch nào nổi tiếng 
+    - có mấy tour du lịch ở Cần Thơ 
+    - bạn biết tour du lịch nào ở Cần Thơ không giới thiệu cho tôi 
+    - tôi muốn hỏi về các tour ở Cần Thơ
+    - tour du lịch Cần Thơ
+
+- intent: ask_location
+  examples: |
+    - hay gioi thieu ve [Ben Ninh Kieu](location)
+    - [Ben ninh kieu](location)
+    - [Bến Ninh Kiều ](location) co lich su hinh thanh nhu the nao
+    - Những hoạt động thú vị nào có thể trải nghiệm tại [Bến Ninh Kiều](location)
+    - Cảnh quan tại [bến ninh kiều](location) có gì đặc sắc
+    - toi muon den [ben ninh kieu](location)
+    - [ninh kieu](location)
+    - [benninhkieu](location)
+    - [ben ninh kieu](location) thi sao
+    - [Bến Ninh Kiều](location) có những dịch vụ du lịch gì hấp dẫn
+
+    - Hay giới thiệu về [Chợ Nổi Cái Răng](location)
+    - [chợ nổi](location) nằm ở đâu
+    - lich su hinh thanh cua [chợ nổi](location) như thế nào
+    - Tôi muốn đến [chợ nổi](location), đi như thế nào
+    - Nnhung trai nghiem tai [cho noi cai rang](location)
+    - Thời điểm nào tốt nhất để tham quan [Chợ Nổi](location)
+    - [chợ nổi cái răng](location) mở cửa vào lúc nào
+    - Cảnh quan xung quanh [Nổi Cái Răng](location) có gì thú vị
+    - Tôi có thể mua đặc sản gì tại [Cái Răng](location)
+    - [chợ nổi cái răng](location) có dịch vụ du lịch gì nổi bật
+    - Làm thế nào để đi thuyền tham quan [Chợ Nổi Cái Răng](location)
+    - [cho noi cai rang](location) 
+    - [cho noi](location)
+    - Tại sao [cái răng](location) được xem là điểm đến nổi tiếng ở Cần Thơ?
+    - Những hoạt động văn hóa đặc sắc tại [cái răng](location) là gì?
+    - Có nhà hàng hoặc quán ăn nào gần [cái răng](location) không?
+    - Giá vé thuê thuyền tại [chợ nổi cái răng](location) như thế nào?
+    - [chợ nổi cái răng](location) có những mặt hàng nào đặc trưng?
+    - Có thể mua sắm tại [chợ nổi cái răng](location) vào buổi tối không?
+    - Thuyền tại [Chợ Nổi Cái Răng](location) hoạt động vào những khung giờ nào?
+    - Có hướng dẫn viên du lịch tại [Chợ Nổi Cái Răng](location) không?
+    - Đến [Chợ Nổi Cái Răng](location) vào dịp lễ có gì khác biệt?
+    - Cách tốt nhất để trải nghiệm trọn vẹn [Chợ Nổi Cái Răng](location) là gì?
+
+    - Hãy giới thiệu về [làng du lịch mỹ khánh](location)
+    - [Lang du lich My Khanh](location) co gi 
+    - Tôi muốn đến [làng du lịch mỹ khánh](location), đi như thế nào
+    - Ở [làng mỹ khánh](location) có đặc sản gì nổi bật
+    - Lịch sử hình thành của [làng mỹ khánh](location) như thế nào
+    - Những trải nghiệm đặc biệt nào có tại [Mỹ Khánh](location)
+    - [làng mỹ khánh](location) co dich vu nhu the nao
+    - [Làng Mỹ Khánh](location) noi tieng ve dieu gi
+    - Thời điểm nào nên tham quan [lang my khanh](location)
+    - nhung tro choi dan gian o [làng du lịch mỹ khánh](location) co gi
+    - Tôi có thể đi dã ngoại ở [Làng Mỹ Khánh](location) không
+    - [lang my khanh](location)
+    - ok toi thi [Lang My Khanh](location)
+    - Tại sao [làng mỹ khánh](location) là điểm đến hấp dẫn ở Cần Thơ?
+    - Có thể trải nghiệm homestay tại [làng mỹ khánh](location) không?
+    - Giá vé vào cổng [làng mỹ khánh](location) là bao nhiêu?
+    - Những hoạt động tham quan và khám phá tại [làng mỹ khánh](location) có gì nổi bật?
+    - [làng mỹ khánh](location) có chợ phiên hoặc khu mua sắm không?
+    - Tôi có thể tổ chức tiệc hoặc sự kiện tại [làng du lịch mỹ khánh](location) không?
+    - Những món ăn miền Tây nào có tại [làng du lịch mỹ khánh](location)?
+    - Đến [làng du lịch mỹ khánh](location) vào mùa nào là tốt nhất?
+    - Có thể tham gia câu cá hoặc nấu ăn tại [làng du lịch mỹ khánh](location) không?
+    - Những loại hình dịch vụ nghỉ dưỡng có tại [làng du lịch mỹ khánh](location) là gì?
+
+    - gioi thieu ve [thiền viện trúc lâm phương nam](location)
+    - Kiến trúc của [thiền viện trúc lâm](location) có gì đặc biệt
+    - To muon den [Thiền viện](location)
+    - [Trúc Lâm Phương Nam](location) có lịch sử hình thành ra sao
+    - Những hoạt động tâm linh nào tại [thiền viện trúc lâm phương nam](location)
+    - Ở [thiền viện](location) có lớp học thiền không
+    - Thời điểm nào thích hợp để thăm [thiền viện trúc lâm](location)
+    - [thiền viện trúc lâm](location) có không gian thế nào
+    - Tôi có thể tham gia khóa tu tại [thiền viện trúc lâm](location) không
+    - [thiền viện trúc lâm phương nam](location) có những dịch vụ hỗ trợ khách thăm quan không
+    - [thien vien truc lam phong nam](location)
+    - [thien vien](location)
+    - [truc lam phuong nam](location)
+
+    - tôi nên đi thăm [vườn cò](location) vào mùa nào trong năm
+    - có những loài chim hiếm nào sinh sống tại [vườn cò](location)
+    - làm sao để đặt tour du lịch tham quan [bằng lăng](location)
+    - thoi gian mo cua [vườn cò](location) la khi nao
+    - tôi có cần mua vé trước khi đến [vuon co](location) không
+    - [vườn cò](location) cách trung tâm cần thơ bao xa
+    - ở [vườn cò](location) có những dịch vụ gì cho du khách
+    - đi thuyền tham quan [vườn cò](location) có an toàn không
+    - nên đi tham quan [vườn cò bằng lăng](location) vào buổi sáng hay buổi chiều
+    - có hướng dẫn viên tại [vườn cò bằng lăng](location) để giải thích về hệ sinh thái không
+    - [vườn cò bằng lăng](location)
+    - [bang lang vuon co](location)
+    - [vườn cò bằng lăng](location)
+    - khi nào là thời điểm tốt nhất để tham quan [vườn cò](location)
+    - nhung loai dong vat nao thuong thay o [vuon co](location) 
+    - giờ hoạt động của [vườn cò](location) là gì
+    - cần chuẩn bị những gì trước khi tham quan [vườn cò](location) 
+    - Những khu vực nào trong [vườn cò](location) là đẹp nhất để chụp ảnh?
+    - Các loài cò tại [vườn cò bằng lăng](location) thường xuất hiện vào thời điểm nào trong ngày?
+    - Từ [vườn cò bằng lăng](location), có thể dễ dàng tham quan các địa điểm du lịch khác không?
+    - Có thể tổ chức cắm trại tại [vườn cò bằng lăng](location) không?
+    - tôi muốn đi [vườn cò bằng lăng](location)
+    
+- intent: ask_restaurant
+  examples: |
+    - [quán ăn](restaurant) nào ngon ở [Chợ nổi Cái Răng](location) 
+    - Có [quán ăn] nào ngon tại [chợ nổi cái răng](location) không
+    - Nhà hàng nổi nào phục vụ [món ăn đặc sản](restaurant) ở [chợ nổi cái răng](location)
+    - Tại [chợ nổi cái răng](location), có chỗ nào bán [hủ tiếu ngon](restaurant) không
+    - Có nên [ăn sáng](restaurant) tại [Chợ nổi](location) không, và nên ăn ở đâu
+    - [chợ nổi cái răng] có nhà hàng nào phục vụ các [món đặc trưng miền Tây](restaurant)
+    - Có [quán ăn hải sản](restaurant) nào ngon tại [chợ nổi cái răng](location) không
+    - Du khách có thể ăn uống tại các [nhà hàng trên sông](location) ở [chợ nổi](location)
+    - Có [quán nhậu](restaurant) nào nổi tiếng ở [chợ nổi](location) không
+    - Ở [chợ nổi cái răng](location) có [chỗ ăn](restaurant) nào được yêu thích
+    - Du khách nên thử [món hải sản](restaurant) nào khi đến [Chợ nổi](location) 
+    - Có [nhà hàng buffet](restaurant) nào tại [chợ nổi](location) không
+    - Nên ăn [bánh xèo](restaurant) ở đâu khi tham quan [Cái Răng](location) 
+    - tôi muốn tìm [quán ăn](restaurant) ở [chợ nổi cái răng](location) 
+    - Có [quán ăn](restaurant) sáng nào ngon tại [chợ nổi cái răng](location) không?
+    - Ở [chợ nổi cái răng](location), có [quán ăn](restaurant) vặt nào nổi tiếng không?
+    - Du khách nên thử [món bún mắm](restaurant) ở đâu khi tham quan [chợ nổi cái răng](location)?
+    - Tại [chợ nổi cái răng](location), có [nhà hàng](restaurant) gia đình nào không?
+    - Có quán cà phê nào view đẹp ở [chợ nổi cái răng](location) không?
+    - [chợ nổi cái răng](location) có [nhà hàng](restaurant) buffet hải sản không?
+    - Có [nhà hàng](restaurant) nổi nào phục vụ món lẩu tại [chợ nổi cái răng](location) không?
+    - Tại [chợ nổi cái răng](location), có [quán ăn](restaurant) chay nào không?
+    - Du khách nên ăn món bún riêu ở đâu khi đến [chợ nổi cái răng](location)?
+    - Có [quán ăn](restaurant) gia đình nào phù hợp với trẻ nhỏ tại [chợ nổi cái răng](location) không?
+
+    - [Nhà hàng](restaurant) nào nổi tiếng và ngon ở [Bến Ninh Kiều](location)
+    - Có [quán ăn](restaurant) nào phục vụ [đặc sản miền Tây](restaurant) tại [Bến Ninh Kiều](location) không
+    - Tại [Bến Ninh Kiều](location), có [nhà hàng](location) nào có view đẹp ra sông không
+    - [nha hang](restaurant) nào ở [ben ninh kieu] được đánh giá cao về chất lượng phục vụ
+    - Có những [món ăn](restaurant) nào đặc trưng mà nên thử tại [ben ninh Kieu](location)
+    - [Bến Ninh Kiều] có những [địa điểm ăn uống](restaurant) nào phù hợp cho gia đình không
+    - Có [nhà hàng](restaurant) nào nổi tiếng phục vụ [món ăn miền Tây](restaurant) ở [Bến Ninh Kiều](location)
+    - Ở [ben ninh kieu](location), có [quán ăn nào](restaurant) phù hợp cho các cặp đôi không
+    - Tại [Bến Ninh Kiều](location), có [nhà hàng sang trọng](restaurant) nào phục vụ [món Âu](restaurant) không
+    - [bến ninh kiều](location) có những [nhà hàng](restaurant) nào được đánh giá cao về giá cả hợp lý
+    - Có [quán ăn vặt](restaurant) nào nổi tiếng ở [bến ninh kiều](location) không
+    - Ở [bến ninh kiều](location), du khách nên thử [món đặc sản](restaurant) nào
+    - Tại [Bến](location), có [nhà hàng buffet](restaurant) nào không
+    - [bến](location) có [quán chè](restaurant) nào ngon không
+    
+
+    - [Nhà hàng](restaurant) nào ngon nhất tại [làng mỹ khánh]
+    - tôi muốn tìm [quán ăn](restaurant) ở [làng mỹ khánh](location)
+    - Có [quán ăn](restaurant) nào ngon ở [làng mỹ khánh](location) không?
+    - Tôi nên [ăn gì](restaurant) tại [làng mỹ khánh](location)?
+    - Có quán nào bán món ăn truyền thống ở [làng mỹ khánh](location) không?
+    - Có [nhà hàng](restaurant) nào phục vụ hải sản tại [làng du lịch mỹ khánh](location) không?
+    - Tại [làng mỹ khánh](location), [quán ăn](restaurant) nào được yêu thích nhất?
+    - Có chỗ nào bán [món chay](restaurant) tại [làng du lịch mỹ khánh](location) không?
+    - Có quán cà phê nào view đẹp ở [làng du lịch mỹ khánh](location) không?
+    - Nên [ăn](restaurant) ở đâu khi đến [làng du lịch mỹ khánh](location)?
+    - Có [nhà hàng](restaurant) nào nổi tiếng ở [làng du lịch mỹ khánh](location) không?
+    - Du khách thường [ăn món gì](restaurant) tại [làng du lịch mỹ khánh](location)?
+    - tôi muốn tìm [quán ăn](restaurant) ở [làng mỹ khánh](location)
+    - Có [chỗ ăn](restaurant) nào phục vụ [quán ăn](restaurant) tại [làng mỹ khánh](location) không
+    - Tại [làng mỹ khánh](location), có [nhà hàng](restaurant) nào có không gian thoáng đãng không
+    - Có những [món đặc sản](restaurant) nào mà nên thử ở [làng mỹ khánh](location)
+    - Tại [làng du lịch mỹ khánh](location), có địa điểm nào phục vụ [buffet](restaurant) không
+    - Có [quán ăn](restaurant) tại [làng du lịch mỹ khánh](location) không
+    - Ở [làng du lịch](location), có [quán ăn](restaurant) nào nổi tiếng với [món nướng](restaurant)
+    - Tại [làng mỹ khánh](location), có [nhà hàng gia đình](restaurant) nào không
+    - Có [chỗ ăn](restaurant) nào bán [món hải sản](restaurant) tươi tại [làng](location) 
+    - Ở [làng](location), có [quán cà phê](restaurant) nào view đẹp không
+    - Có [nhà hàng](restaurant) nổi nào ở [Mỹ Khánh](location) không
+    - Ở [Mỹ Khánh](location), du khách nên thử [món bún riêu](restaurant) ở đâu
+    - Có [nhà hàng buffet hải sản](restaurant) nào tại [Mỹ Khánh](location) không
+    - Tại [Mỹ Khánh](location), có [chỗ ăn](restaurant) nào phù hợp cho các gia đình
+    - Có [quán ăn](restaurant) nhanh nào tại [Làng Mỹ Khánh](location) không?
+    - Tại [làng du lịch mỹ khánh](location), có [nhà hàng](restaurant) buffet nào giá cả hợp lý không?
+    - Có [nhà hàng](restaurant) sang trọng nào phục vụ món Âu tại [Làng Mỹ Khánh](location) không?
+    - Ở [Làng Mỹ Khánh](location), có [quán ăn](restaurant) nào chuyên về món chay không?
+    - Tại [làng du lịch mỹ khánh](location), có [nhà hàng](restaurant) nào chuyên phục vụ món Tây Nam Bộ không?
+    - Có [quán ăn](restaurant) nào phục vụ đồ ăn vặt tại [làng du lịch mỹ khánh](location) không?
+    - Tại [Mỹ Khánh](location), du khách có thể tìm [nhà hàng](restaurant) nào phục vụ hải sản không?
+    - Ở [làng du lịch mỹ khánh](location), có [quán ăn](restaurant)nào phục vụ đồ uống giải khát không?
+    - Tại [Mỹ Khánh](location), có [quán ăn](restaurant) nào chuyên về món bún chả cá không?
+    - Có [nhà hàng](restaurant) ngoài trời nào tại [làng du lịch mỹ khánh](location) có không gian phù hợp cho nhóm đông người không?
+
+    - Có [nhà hàng](restaurant) nào ngon gần [Thiền Viện Trúc Lâm Phương Nam](location) không
+    - Tại [Thiền Viện Trúc Lâm Phương Nam](location), có [quán ăn](restaurant) nào phục vụ [món chay](restaurant) không
+    - [dac san](restaurant) o [thien vien truc lam phuong nam] la gi
+    - [mon an ngon](restaurant) o [thien vien](location)
+    - [mon chay](restaurant) nao ngon o [thien vien truc]
+    - Có [quán ăn](restaurant) nào gần [Thiền Viện Trúc Lâm Phương Nam](location) mà nên thử không
+    - Tại [Thiền viện](location), có [nhà hàng](restaurant) nào phục vụ [món ăn địa phương](restaurant) không
+    - Có [quán ăn chay](restaurant) nào nổi tiếng gần [Thiền viện](location) không
+    - [Món đặc sản](restaurant) nào phổ biến ở [Thiền Viện](location) 
+    - Tại [Trúc Lâm Phương Nam](location), có [quán cà phê](restaurant) nào dễ thương không
+    - Anh có thể tìm thấy [nhà hàng hải sản](restaurant) nào gần [thiền viện trúc lâm](location) không
+    - Có nên thử [món ăn chay](restaurant) nào tại [thiền viện trúc lâm](location) không
+    - Gợi ý cho tôi [quán ăn ngon](restaurant) ở [Thiền Viện Trúc Lâm] đi.
+    - Du khách thường [thưởng thức món ăn](restaurant) nào ở [Thiền Viện Trúc Lâm]
+
+    - Tại [vườn cò](location), có [quán](restaurant) nào có không gian thoáng đãng không
+    - Có những [món ăn nổi bật](restaurant) mà nên thử tại [vườn cò](location)
+    - [vườn cò](location) có phục vụ [hải sản tươi](restaurant) sống không
+    - Có những [địa điểm ăn uống](restaurant) nào phù hợp cho gia đình gần [vườn cò](location) không
+    - Có [nhà hàng](restaurant) nào nổi tiếng gần [vườn cò](location) không
+    - Tại [vườn cò bằng lăng](location), có [quán ăn](restaurant) nào phục vụ [món đặc sản](restaurant) không
+    - Những [món ăn ngon](restaurant) nào được phục vụ tại [vườn cò bằng lăng](location)
+    - Có [quán cà phê](restaurant) nào dễ thương ở [vườn cò](location) không
+    - [vườn cò bằng lăng](location) có nhà hàng [buffet](restaurant) nào không
+    - Có [quán ăn vặt](restaurant) nào nổi bật tại [vườn cò bằng lăng](location) không
+    - Anh có biết [món chay](restaurant) nào ngon ở [Vườn Cò](location) không
+    - Có [quán ăn gia đình](restaurant) nào phù hợp cho trẻ em gần [Vườn Cò](location) không
+    - Tại [vườn cò bằng lăng](location), có những [địa điểm ăn uống](restaurant) nào phục vụ [món hải sản](restaurant) không
+    - Có [nhà hàng](restaurant) nào có không gian ngoài trời ở [vườn cò bằng lăng] không
+    - tôi muốn tìm [quán ăn](restaurant) ở [vườn cò](location) 
+    - Có [quán ăn](restaurant) nào nổi tiếng tại [vườn cò](location) Bằng Lăng không?
+    - Tại [vườn cò](location), có nhà hàng nào phục vụ món ăn miền Tây không?
+    - Ở [vườn cò](location) Bằng Lăng, có [quán ăn](restaurant) gia đình nào không?
+    - Tôi muốn tìm [quán ăn](restaurant) chay tại [vườn cò](location) Bằng Lăng, có gợi ý nào không?
+    - Tại [vườn cò](location), có nhà hàng nào phục vụ hải sản tươi sống không?
+    - Có [quán ăn](restaurant) vặt nào gần [vườn cò](location) Bằng Lăng không?
+    - Ở [vườn cò](location), có quán cà phê nào view đẹp không?
+    - Có nhà hàng buffet nào tại [vườn cò](location) Bằng Lăng không?
+    - Tại [vườn cò](location) Bằng Lăng, có [quán ăn](restaurant) nhanh nào không?
+    - Có [quán ăn](restaurant) gia đình nào gần [vườn cò](location) mà phù hợp cho trẻ nhỏ không?
+
+- intent: ask_hotel
+  examples: |
+    - tôi muốn tìm [nhà nghỉ](hotel) ở [vườn cò](location) bằng lăng giá khoảng [900k](budget) 
+    - [Nơi nghỉ ngơi](hotel) nào có [giá thấp](budget) gần [vườn Cò Bằng Lăng](location) có chất lượng tốt
+    - có [nhà nghỉ](hotel) nào [giá rẻ](budget) ở [vườn Cò Bằng Lăng](location) không
+    - [chỗ nghỉ](hotel) nào thoải mái chi phí [1 triệu](budget) ở gần [vườn Cò Bằng Lăng](location)
+    - Có [khách sạn](hotel) nào ở [vườn cò](location) chi phí tầm [500k](budget) dịch vụ tốt không
+    - Tại [vườn cò](location), có [Nơi nghỉ ngơi](hotel) nào gần đó chi phí tầm [800k](budget) tiện lợi không
+    - Những [chỗ nghỉ](hotel) nào phù hợp cho gia đình chi phí tầm [600 k](budget) tại [Vườn Cò](location) 
+    - Có [phòng trọ](hotel) nào giá khoảng [2triệu](budget) có bữa sáng miễn phí ở [Vườn cò](location) không
+    - [Khách sạn](hotel) nào giá khoảng [4triệu](budget) có hồ bơi ở gần [vườn cò bằng lăng](location)
+    - Có [chỗ nghỉ chân](hotel) nào [giá cả phải chăng](budget) tại [vườn Cò Bằng Lăng](location) không
+    - Tại [Bằng Lăng](location), có chỗ nghỉ nào gia [thấp](budget) có view đẹp không
+    - Có [chỗ ngủ](hotel) nào có đánh [giá tốt](budget) khoảng [2 củ](budget) ở [vuon co bang lang](location) không
+    - [chỗ ngủ](hotel) nào có không gian yên tĩnh khoảng [3 củ](budget) ở gần [Vườn Cò](location) 
+
+    - [chỗ ở](hotel) nào gần [thiền viện trúc lâm](location) tốt giá [1 triệu](budget)
+    - gợi ý [chỗ nghỉ](hotel) [giá thấp](budget) gần [thiền viện trúc lâm](location)
+    - Có [phòng trọ](hotel) nào có giá [5tr](budget) tốt gần [Thiền Viện Trúc Lâm](location) không
+    - Tại [thiền viện trúc lâm], có [phòng trọ](hotel) nào [giá hợp lý](budget) không
+    - Gợi ý cho tôi [căn hộ](hotel) nào [giá rẻ](budget) gần [thiền viện trúc lâm trúc lâm](location) có dịch vụ tốt
+    - [căn hộ](hotel) nào chi phí tầm [500k](budget) có bữa sáng ngon gần [thiền viện trúc lâm trúc lâm](location)
+    - Có [chỗ dừng chân](hotel) nào chi phí tầm [800k](budget) không gian thoải mái ở gần [Thiền viện](location) không
+    - Tại [Thiền viện](location),  có [chỗ ở](hotel) [giá cả phải chăng](budget) có hồ bơi không
+    - Có [khu nghỉ dưỡng](hotel) nào giá khoảng [2triệu](budget) gần [Trúc Lâm](location) mà nên thử không
+    - Những [khu nghỉ dưỡng](hotel) khoảng [2 củ](budget) nào gần [Trúc Lâm](location) phù hợp cho cặp đôi
+    - Có [nhà trọ](hotel) nào tầm khoảng [3 củ](budget) cho phép đưa thú cưng ở gần [thien vien truc lam phuong nam](location) không
+    - Gợi ý [chỗ nghỉ](hotel) khoảng [4triệu](budget) có view đẹp tại [Thiền Viện](location)
+
+    - [cho nghi ngoi](hotel) giá [1 triệu](budget) o [ben ninh kieu]
+    - [cho ngu](hotel) gan [benninhkieu] giá [7 triệu](budget)
+    - [khach san](hotel) nao [5tr](budget) co chat luong dich vu tot o [Bến Ninh Kiều](location)
+    - Có [chỗ nghỉ ngơi](hotel) nào chi phí [giá thấp](budget) gần [Bến Ninh Kiều](location) không
+    - Tại [bến ninh kiều](location), có [khách sạn](hotel) nào giá khoảng [2triệu](budget) không
+    - Có [nhà nghỉ](hotel) nào khoảng [2 củ](budget) ở [bến ninh kiều](location) mà nên thử không
+    - Gợi ý cho tôi [chỗ lưu trú](hotel) giá khoảng [4triệu](budget) nào gần [bến](location) có dịch vụ tốt
+    - Có [chỗ ở](hotel) nào yên tĩnh tầm [600 k](budget) ở gần [bến](location) không
+    - Tại [bến](location), có [nhà trọ](hotel) nào giá khoảng [5triệu](budget) có bữa sáng ngon không
+    - Có [chỗ dừng chân](hotel) nào tầm [800 k](budget) gần [bến](location) không có giá [9tr](budget)
+    - [Khách sạn](hotel) nào ở [Bến Ninh Kiều](location) chi phí [3 triệu](budget) có hồ bơi tầm [600 k](budget) không
+    - Có [khu nghỉ dưỡng](hotel) chi phí [5 tr](budget) nào gần [Bến Ninh Kiều](location) không
+    - Tìm cho tôi [nơi trú](hotel) [giá rẻ](budget) gần [Bến Ninh Kiều](location) có đánh giá tốt.
+
+    - [nha nghi](hotel) [giá rẻ](budget) [cho noi cai rang](location)
+    - [chỗ nghỉ](hotel) nào view đẹp [giá hợp lý](budget) gần [Chợ Nổi Cái Răng](location)
+    - Có [khách sạn](hotel) nào chi phí [5 tr](budget) gần [Chợ Nổi Cái Răng](location) có dịch vụ tốt không
+    - Tại [Chợ Nổi](location), có [chỗ ở](hotel) nào khoảng [2 củ](budget) không
+    - Gợi ý cho tôi [nhà nghỉ](hotel) nào tầm [800 k](budget) có không gian thoải mái gần [Chợ Nổi](location
+    - Có [nhà nghỉ](hotel) giá khoảng [5triệu](budget) nào phục vụ bữa sáng ngon tại [Chợ Nổi](location) không
+    - Có [chỗ nghỉ](hotel) nào [4 củ](budget) cho phép đưa thú cưng ở gần [Chợ](location) không
+    - Tại [Chợ Nổi](location), có [hotel](hotel) nào giá khoảng [thấp](budget) có hồ bơi không
+    - Có [nhà trọ](hotel) nào [giá rẻ](budget) nổi tiếng ở gần [chợ](location) không
+    - Gợi ý cho tôi [chỗ dừng chân](hotel) nào [rẻ](budget) gần [cho noi cai rang](location) có view đẹp
+    - Có [khu nghỉ dưỡng](hotel) [giá thấp](budget) nào gần [cho noi cai rang](location) không
+
+    - Tại [làng du lịch mỹ khánh](location), có [khách sạn](hotel) nào có [giá thấp](budget) đáng chú ý không
+    - Có những [chỗ nghỉ](hotel) nào khoảng [2 củ](budget) gần [Làng Du Lịch Mỹ Khánh](location) phù hợp cho gia đình không
+    - Anh có biết [nhà nghỉ](hotel) nào chi phí [thấp](budget) gần [làng du lịch](location) có dịch vụ tốt không
+    - Những [chỗ ở](hotel) nào tầm [500k](budget) ở [Làng Du Lịch](location) có đánh giá cao
+    - Có [khách sạn](hotel) nào có bữa sáng miễn phí chi phí tầm [800k](budget) tại [làng Mỹ Khánh](location) không
+    - Có [nhà nghỉ](hotel) nào phí [3 triệu](budget)và sạch sẽ ở gần [làng Mỹ Khánh](location) không
+    - Gợi ý cho tôi một [chỗ nghỉ](hotel) chi phí tầm [700 k](budget) gần [làng Mỹ Khánh](location) có không gian đẹp nhé
+    - Tại [làng Mỹ Khánh](location),những [hotel] nào chi phí [3 triệu](budget) có hồ bơi không
+    - Có [chỗ nghỉ chân](hotel) nào có giá [5tr](budget) ở [làng du lịch](location) phục vụ món ăn ngon không
+    - Tìm cho tôi [nhà nghỉ](hotel) nào chi phí [5 tr](budget) gần [làng du lịch mỹ khánh](location) có giá hợp lý nhé
+
+- intent: ask_vehicle
+  examples: |
+    - đi những [phương tiện](vehicle) nào để di chuyển ở [Vườn Cò Bằng Lăng](location)
+    - tôi có thể [thuê xe nào](vehicle) để đi đến [Vườn Cò Bằng Lăng](location)
+    - có nên [đi thuyền](vehicle) để khám phá [Bến Ninh Kiều](location) không
+    - có dịch vụ [xe ôm](vehicle) nào ở [bến ninh kiều](location) không
+    - Tại [Chợ Nổi Cái Răng](location), có [phương tiện di chuyển](vehicle) nào thuận tiện không
+    - Có thể thuê [xe máy](vehicle) nào để khám phá [Vườn Cò](location) không
+    - dịch vụ [xe đưa đón](vehicle) nào ở [Chợ Nổi Cái Răng] không
+    - [xe đạp](vehicle) nào cho thuê gần [Chợ Nổi](location) không
+    - Có nên đi [taxi](vehicle) từ [Làng Du Lịch Mỹ Khánh](location) đến các điểm tham quan khác không
+    - Có [phương tiện công cộng](vehicle) nào phục vụ tại [ben ninh kieu](location) không
+    - Tôi có thể thuê [xe hơi](vehicle) nào để di chuyển xung quanh [Làng Du Lịch Mỹ Khánh](location)
+    - Có dịch vụ [phương tiện](vehicle) nào để vận chuyển đồ đạc ở [Làng Mỹ Khánh](location) không
+    - Có [phương tiện](vehicle) nào được khuyến nghị ở [Mỹ Khánh](location) không
+    - dịch vụ [xe buýt](vehicle) nào đến [Thiền Viện Trúc Lâm](location) không
+    - [taxi](vehicle) nào đến [Thiền Viện Trúc Lâm](location) không
+    - nên đi [xe máy](vehicle) hay [xe ôm](vehicle) để đến [Thiền Viện Trúc Lâm](location)
+    - có thể [đi bộ](vehicle) từ trung tâm Cần Thơ đến [Thiền Viện Trúc](location) không
+    - [dịch vụ cho thuê xe](vehicle) nào gần [Thiền Viện Trúc](location) không
+    - di [phương tiện nào là tốt nhất](vehicle) để khám phá [Thiền viện](location)
+    - có [xe bus](vehicle) nào đi đến [Thiền Viện](locaton) không
+    - đi [xe máy](vehicle) ở [vườn cò](location) được không
+
+- intent: hihi
+  examples: |
+    - chào em
+    - anh chào em
+    - chào bạn
+    - hi cậu
+    - hé lô
+    - hi
+    - hello
+    - hey
+    - hú
+    - chào
+    - hí anh em
+    - xin chào
+    - xin chao
+- intent: goodbye
+  examples: |
+    - tạm biệt em
+    - chào tạm biêt
+    - bye
+    - gút bye
+    - goodbye
+    - cảm ơn nhé
+    - thế thôi chào em
+    - rất vui được nói chuyện với em

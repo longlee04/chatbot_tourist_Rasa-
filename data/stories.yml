@@ -1,0 +1,48 @@
+version: "2.0"
+
+stories:
+- story: bye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: hihi
+  steps:
+  - intent: hihi
+  - action: utter_hihi
+  
+# du lich can tho
+- story: form1
+  steps:
+    - intent: ask_cantho
+    - action: utter_ask_cantho
+
+# tour   
+- story: form2
+  steps:
+    - intent: ask_tour
+    - action: action_extract_location
+
+# dia diem du lich
+- story: form3
+  steps:
+    - intent: ask_location
+    - action: action_extract_location
+
+# restaurant
+- story: form4
+  steps:
+    - intent: ask_restaurant
+    - action: action_extract_location
+# hotel
+- story: form5
+  steps:
+    - intent: ask_hotel
+    - action: action_extract_location
+
+# vehicle
+- story: form6
+  steps:
+    - intent: ask_vehicle
+    - action: action_extract_location
+    

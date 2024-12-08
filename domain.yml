@@ -1,0 +1,818 @@
+version: '2.0'
+intents:
+- goodbye
+
+- hihi
+
+- ask_cantho
+
+- ask_tour
+
+- ask_location
+
+- ask_restaurant
+
+- ask_hotel
+
+- ask_vehicle
+
+entities:
+- location
+- hotel
+- vehicle
+- restaurant
+- budget
+
+responses:
+    utter_goodbye:
+        - text: "Rất vui khi giúp được bạn giải đáp câu hỏi,hãy đặt tiếp câu hỏi cho tôi nếu còn gì thắc mắc."
+    utter_hihi:
+        - text: Xin chào bạn có cần tôi giúp đỡ gì không ?
+    utter_ask_cantho:
+        - text: |-
+            Dưới đây là một vài địa điểm du lịch nổi tiếng ở Cần Thơ mà bạn có thể ghé thăm:
+
+            1. **Chợ Nổi Cái Răng** (4.1★ / 5,4N đánh giá):
+                - Là một trong những chợ nổi lớn và đặc trưng nhất của miền Tây.
+                - Nổi tiếng với những ghe thuyền đầy ắp trái cây và nông sản.
+            
+            2. **Bến Ninh Kiều** (4.4★ / 14N đánh giá):
+                - Một biểu tượng của Cần Thơ, nơi lý tưởng để ngắm sông Hậu.
+                - Khám phá các nhà hàng nổi và quán cà phê dọc bờ sông.
+                - Về đêm, bến Ninh Kiều càng thêm lung linh, thu hút du khách.
+
+            3. **Làng Mỹ Khánh** (4.6★ / 252 đánh giá):
+                - Khu du lịch sinh thái kết hợp với văn hóa truyền thống miền Tây.
+                - Tham quan vườn cây trái, trải nghiệm làm nông dân, và tham gia trò chơi dân gian.
+
+            4. **Thiền Viện Trúc Lâm Phương Nam** (4.5★ / 5,3N đánh giá):
+                - Thiền viện lớn nhất ở miền Tây Nam Bộ, với kiến trúc Phật giáo đặc sắc.
+                - Không gian yên tĩnh, thanh tịnh, lý tưởng để thư giãn tâm hồn.
+
+            5. **Vườn Cò Bằng Lăng** (3.8★ / 656 đánh giá):
+                - Khu bảo tồn chim tự nhiên, nơi cư trú của hàng nghìn con cò và các loài chim khác.
+                - Cảnh quan thiên nhiên hoang dã tuyệt đẹp, đặc biệt vào lúc bình minh hoặc hoàng hôn.
+    utter_ask_tour:
+        - text: "Đợi anh bổ sung tour nhé"
+
+    utter_ask_chonoicairang:
+        - text: |-
+            Bạn có thể tham khảo trước các dịch vụ ở Chợ nổi Cái Răng tại [đây](https://vinpearl.com/vi/cho-noi-cai-rang-can-tho-trai-nghiem-doc-dao-tai-mien-tay-song-nuoc) còn thắc mắc nào sau khi tham khảo hãy nói với tôi
+    utter_ask_benninhkieu:
+        - text: |-
+            Bạn có thể tham khảo trước các dịch vụ ở Bến Ninh Kiều tại [đây](https://vinpearl.com/vi/ben-ninh-kieu-can-tho-co-gi-thu-vi-kinh-nghiem-an-choi-sieu-chi-tiet)  còn thắc mắc nào sau khi tham khảo hãy nói với tôi
+    utter_ask_langmykhanh:
+        - text: |-
+            BBạn có thể tham khảo trước các dịch vụ ở Làng du lịch Mỹ Khánh tại [đây](https://vinpearl.com/vi/khu-du-lich-my-khanh-can-tho-va-6-trai-nghiem-hay-ho-hap-dan)  còn thắc mắc nào sau khi tham khảo hãy nói với tôi
+    utter_ask_thienvientruc:
+        - text: |-
+            Bạn có thể tham khảo trước các dịch vụ ở Thiền viện Trúc Lâm Phương Nam tại [đây](https://vinpearl.com/vi/thien-vien-truc-lam-phuong-nam-can-tho-chon-tam-linh-thanh-tinh)  còn thắc mắc nào sau khi tham khảo hãy nói với tôi
+    
+    utter_ask_restaurant_chonoicairang:
+        - text: |
+            Tại Chợ nổi Cái Răng, có rất nhiều quán ăn ngon phục vụ các món đặc sản miền Tây. Dưới đây là một số nhà hàng và quán ăn nổi tiếng mà bạn có thể tham khảo, được chia thành hai nhóm:
+
+            **Nhóm nhà hàng bình dân:**
+            
+            1. **Nhà hàng Nổi Cái Răng**  
+                - **Địa chỉ**: Trên ghe nổi tại chợ Cái Răng.  
+                - **Mô tả**: Chuyên phục vụ các món ăn địa phương, mang đến trải nghiệm ẩm thực ngay trên thuyền với khung cảnh sông nước miền Tây.
+
+            2. **Quán Hủ Tiếu Cái Răng**  
+                - **Địa chỉ**: Số 23, Đường Nguyễn Trãi, Chợ Nổi Cái Răng.  
+                - **Mô tả**: Món ăn đặc trưng của miền Tây, hương vị hủ tiếu truyền thống, giá cả phải chăng.
+
+            3. **Quán Bún Cá Nổi Cái Răng**  
+                - **Địa chỉ**: Trên ghe nổi tại chợ Cái Răng.  
+                - **Mô tả**: Phục vụ bún cá đặc trưng của miền Tây, tươi ngon và đậm đà, phù hợp cho những ai yêu thích ẩm thực miền sông nước.
+
+            4. **Nhà hàng Thanh Xuân**  
+                - **Địa chỉ**: Số 45, Đường Lý Thái Tổ, Chợ Nổi Cái Răng.  
+                - **Mô tả**: Nổi tiếng với các món cơm và cá kho tộ đúng điệu miền Tây, không gian thân thiện và giá cả bình dân.
+
+            5. **Quán Cơm Tấm Cái Răng**  
+                - **Địa chỉ**: Số 12, Đường Võ Văn Kiệt, gần Chợ Nổi Cái Răng.  
+                - **Mô tả**: Món cơm tấm miền Tây với sườn nướng thơm ngon, giá bình dân, rất được ưa chuộng.
+
+            6. **Quán Cháo Lươn Cái Răng**  
+                - **Địa chỉ**: Số 15, Đường Hoàng Quốc Việt, Cái Răng.  
+                - **Mô tả**: Phục vụ cháo lươn đậm đà, một món ăn sáng bình dân lý tưởng.
+
+            **Nhóm nhà hàng cao cấp:**
+            
+            7. **Nhà hàng Sao Hôm**  
+                - **Địa chỉ**: Bến Ninh Kiều, P. Tân An, Quận Ninh Kiều, Cần Thơ.  
+                - **Mô tả**: Nhà hàng cao cấp phục vụ các món ăn Á-Âu, với không gian ven sông lãng mạn, thích hợp cho các buổi hẹn hò hoặc bữa ăn gia đình.
+
+            8. **Nhà hàng Hoàng Gia**  
+                - **Địa chỉ**: Số 68, Đường Trần Hưng Đạo, Chợ Nổi Cái Răng.  
+                - **Phân khúc**: Cao cấp.  
+                - **Mô tả**: Một nhà hàng sang trọng, phục vụ đa dạng các món đặc sản miền Tây với phong cách ẩm thực tinh tế và không gian thoải mái.
+
+            Bạn có thể lựa chọn nhà hàng hoặc quán ăn phù hợp với ngân sách và sở thích của mình khi đến Chợ Nổi Cái Răng.
+    utter_ask_restaurant_benninhkieu:
+        - text: |-
+            Tại Bến Ninh Kiều, có rất nhiều quán ăn và nhà hàng nổi tiếng phục vụ đa dạng các món ăn từ bình dân đến cao cấp. Dưới đây là danh sách 10 địa điểm mà bạn có thể tham khảo:
+
+            **Nhóm nhà hàng bình dân:**
+
+            1. **Quán Bánh Cống Cô Út**  
+                - **Địa chỉ**: Số 86, Đường Đề Thám, P. An Cư, Q. Ninh Kiều.  
+                - **Mô tả**: Quán chuyên bánh cống, món ăn đặc trưng của miền Tây với giá cả phải chăng.
+
+            2. **Quán Ốc Nướng Cô Lan**  
+                - **Địa chỉ**: Số 25, Đường Lê Lợi, P. Cái Khế, Q. Ninh Kiều.  
+                - **Mô tả**: Quán ốc nướng với đủ loại ốc tươi ngon, hấp dẫn, phục vụ nhanh và giá bình dân.
+
+            3. **Quán Hủ Tiếu Nam Vang Anh Duy**  
+                - **Địa chỉ**: Số 58, Đường Nguyễn An Ninh, P. An Hội, Q. Ninh Kiều.  
+                - **Mô tả**: Hủ tiếu Nam Vang hương vị đậm đà, nổi tiếng với hương vị miền Tây.
+
+            4. **Quán Cháo Lòng Hai Nghị**  
+                - **Địa chỉ**: Số 12, Đường Nguyễn Trãi, P. Tân An, Q. Ninh Kiều.  
+                - **Mô tả**: Món cháo lòng miền Tây đậm chất dân dã, giá cả hợp lý.
+
+            5. **Quán Bún Riêu Chị Ba**  
+                - **Địa chỉ**: Số 35, Đường Lý Tự Trọng, P. An Phú, Q. Ninh Kiều.  
+                - **Mô tả**: Phục vụ bún riêu cua miền Tây, nổi bật với hương vị đậm đà và giá cả bình dân.
+
+            **Nhóm nhà hàng cao cấp:**
+
+            6. **Nhà hàng Sao Hôm**  
+                - **Địa chỉ**: Bến Ninh Kiều, P. Tân An, Q. Ninh Kiều, Cần Thơ.  
+                - **Mô tả**: Nhà hàng cao cấp phục vụ các món ăn Á-Âu, không gian ven sông lãng mạn và sang trọng.
+
+            7. **Nhà hàng L’Escale**  
+                - **Địa chỉ**: Số 5, Đường Hai Bà Trưng, P. Tân An, Q. Ninh Kiều.  
+                - **Mô tả**: Nhà hàng phục vụ các món ăn quốc tế cao cấp, với không gian hiện đại và đẳng cấp.
+
+            8. **Nhà hàng Hoa Sứ**  
+                - **Địa chỉ**: Khu du lịch Hoa Sứ, P. Cái Khế, Q. Ninh Kiều.  
+                - **Mô tả**: Nhà hàng sân vườn, phục vụ các món đặc sản miền Tây, không gian thoáng đãng và sang trọng.
+
+            9. **Nhà hàng Cổ Trà**  
+                - **Địa chỉ**: Số 47, Đường 30 Tháng 4, P. Xuân Khánh, Q. Ninh Kiều.  
+                - **Mô tả**: Phục vụ đa dạng các món ăn truyền thống và hiện đại, không gian lịch sự và tinh tế.
+
+            10. **Nhà hàng Du Thuyền**  
+                - **Địa chỉ**: Bến Ninh Kiều, P. Tân An, Q. Ninh Kiều.  
+                - **Mô tả**: Nhà hàng cao cấp trên du thuyền, kết hợp ẩm thực và du ngoạn trên sông, mang đến trải nghiệm độc đáo và sang trọng.
+
+            Bạn có thể lựa chọn các nhà hàng và quán ăn tùy theo sở thích và ngân sách của mình khi ghé thăm Bến Ninh Kiều.
+    utter_ask_restaurant_langmykhanh:
+        - text: |
+            Tại Làng Du Lịch Mỹ Khánh, có rất nhiều quán ăn và nhà hàng phục vụ các món đặc sản miền Tây. Dưới đây là danh sách 10 địa điểm mà bạn có thể tham khảo:
+
+            **Nhóm nhà hàng bình dân:**
+
+            1. **Quán Ẩm Thực Miền Tây**  
+                - **Địa chỉ**: Làng Du Lịch Mỹ Khánh, P. Mỹ Khánh, Q. Ninh Kiều, Cần Thơ.  
+                - **Mô tả**: Phục vụ các món ăn đặc trưng miền Tây như cá kho tộ, thịt kho tàu, với giá cả phải chăng.
+
+            2. **Quán Cà Ri Gà**  
+                - **Địa chỉ**: Làng Du Lịch Mỹ Khánh, P. Mỹ Khánh, Q. Ninh Kiều, Cần Thơ.  
+                - **Mô tả**: Món cà ri gà đậm đà, thơm ngon, là lựa chọn tuyệt vời cho bữa trưa hoặc tối.
+
+            3. **Quán Lẩu Cua**  
+                - **Địa chỉ**: Làng Du Lịch Mỹ Khánh, P. Mỹ Khánh, Q. Ninh Kiều, Cần Thơ.  
+                - **Mô tả**: Lẩu cua tươi sống, ăn kèm với rau xanh và các loại hải sản, thích hợp cho các bữa tiệc gia đình.
+
+            4. **Quán Bún Cá Mỹ Khánh**  
+                - **Địa chỉ**: Làng Du Lịch Mỹ Khánh, P. Mỹ Khánh, Q. Ninh Kiều, Cần Thơ.  
+                - **Mô tả**: Phục vụ bún cá đặc trưng với nước dùng thanh ngọt, rất được yêu thích.
+
+            5. **Quán Hủ Tiếu Mỹ Khánh**  
+                - **Địa chỉ**: Làng Du Lịch Mỹ Khánh, P. Mỹ Khánh, Q. Ninh Kiều, Cần Thơ.  
+                - **Mô tả**: Hủ tiếu thơm ngon, được chế biến từ nguyên liệu tươi ngon và giá cả hợp lý.
+
+            **Nhóm nhà hàng cao cấp:**
+
+            6. **Nhà hàng Mỹ Khánh**  
+                - **Địa chỉ**: Làng Du Lịch Mỹ Khánh, P. Mỹ Khánh, Q. Ninh Kiều, Cần Thơ.  
+                - **Mô tả**: Nhà hàng sang trọng, phục vụ đa dạng các món ăn miền Tây và ẩm thực quốc tế, không gian thoải mái.
+
+            7. **Nhà hàng Hương Sông**  
+                - **Địa chỉ**: Làng Du Lịch Mỹ Khánh, P. Mỹ Khánh, Q. Ninh Kiều, Cần Thơ.  
+                - **Mô tả**: Nhà hàng ven sông với món ăn hải sản tươi sống và nhiều lựa chọn khác từ ẩm thực miền Tây.
+
+            8. **Nhà hàng Cò Bay**  
+                - **Địa chỉ**: Làng Du Lịch Mỹ Khánh, P. Mỹ Khánh, Q. Ninh Kiều, Cần Thơ.  
+                - **Mô tả**: Nhà hàng nổi tiếng với các món ăn đặc sản như gà nướng, cá lóc nướng trui, trong không gian sang trọng.
+
+            9. **Nhà hàng Miền Tây Xưa**  
+                - **Địa chỉ**: Làng Du Lịch Mỹ Khánh, P. Mỹ Khánh, Q. Ninh Kiều, Cần Thơ.  
+                - **Mô tả**: Phục vụ các món ăn truyền thống trong không gian mang đậm bản sắc văn hóa miền Tây.
+
+            10. **Nhà hàng Du Thuyền Mỹ Khánh**  
+                - **Địa chỉ**: Làng Du Lịch Mỹ Khánh, P. Mỹ Khánh, Q. Ninh Kiều, Cần Thơ.  
+                - **Mô tả**: Nhà hàng trên du thuyền, kết hợp ẩm thực và du ngoạn trên sông, mang đến trải nghiệm độc đáo và sang trọng.
+
+            Bạn có thể lựa chọn các nhà hàng và quán ăn tùy theo sở thích và ngân sách của mình khi ghé thăm Làng Du Lịch Mỹ Khánh.
+    utter_ask_restaurant_thienvientruc:
+        - text: |-
+            Gần Thiền Viện Trúc Lâm Phương Nam, có nhiều quán ăn và nhà hàng phục vụ các món ăn ngon. Dưới đây là danh sách 10 địa điểm mà bạn có thể tham khảo:
+
+            **Nhóm nhà hàng bình dân:**
+
+            1. **Quán Cơm Tấm Trúc Lâm**  
+                - **Địa chỉ**: Số 10, Đường Trần Hưng Đạo, gần Thiền Viện.  
+                - **Mô tả**: Phục vụ cơm tấm với nhiều lựa chọn món ăn kèm, giá cả phải chăng.
+
+            2. **Quán Bún Mắm**  
+                - **Địa chỉ**: Số 22, Đường Lê Hồng Phong, gần Thiền Viện.  
+                - **Mô tả**: Món bún mắm đậm đà hương vị miền Tây, rất được yêu thích.
+
+            3. **Quán Hủ Tiếu Truyền Thống**  
+                - **Địa chỉ**: Số 15, Đường Phan Văn Đạt, gần Thiền Viện.  
+                - **Mô tả**: Chuyên phục vụ hủ tiếu với nước dùng thanh mát, hấp dẫn.
+
+            4. **Quán Bánh Xèo**  
+                - **Địa chỉ**: Số 5, Đường Lê Lợi, gần Thiền Viện.  
+                - **Mô tả**: Bánh xèo giòn rụm, kèm rau sống tươi ngon, một món ăn vặt không thể bỏ qua.
+
+            5. **Quán Cháo Ếch**  
+                - **Địa chỉ**: Số 8, Đường Nguyễn Văn Linh, gần Thiền Viện.  
+                - **Mô tả**: Phục vụ cháo ếch đậm đà, thơm ngon, rất phù hợp cho bữa sáng.
+
+            **Nhóm nhà hàng cao cấp:**
+
+            6. **Nhà hàng Phương Nam**  
+                - **Địa chỉ**: Khu du lịch Phương Nam, gần Thiền Viện.  
+                - **Mô tả**: Nhà hàng sang trọng phục vụ đa dạng món ăn từ miền Tây đến các món Âu, không gian thoáng đãng.
+
+            7. **Nhà hàng Thiền Viện Trúc Lâm**  
+                - **Địa chỉ**: Ngay trong khuôn viên Thiền Viện.  
+                - **Mô tả**: Phục vụ các món chay thanh đạm và tươi ngon, thích hợp cho những ai tìm kiếm sự thanh tịnh.
+
+            8. **Nhà hàng Sông Hậu**  
+                - **Địa chỉ**: Số 25, Đường Hậu Giang, gần Thiền Viện.  
+                - **Mô tả**: Không gian ven sông lãng mạn, phục vụ món ăn hải sản tươi sống.
+
+            9. **Nhà hàng Đầm Sen**  
+                - **Địa chỉ**: Khu du lịch Đầm Sen, gần Thiền Viện.  
+                - **Mô tả**: Nhà hàng mang đến trải nghiệm ẩm thực đẳng cấp với món ăn từ các nguyên liệu tươi ngon.
+
+            10. **Nhà hàng Hoa Sen**  
+                - **Địa chỉ**: Số 30, Đường Trần Văn Khéo, gần Thiền Viện.  
+                - **Mô tả**: Nhà hàng cao cấp phục vụ các món ăn đặc sản miền Tây trong không gian sang trọng và ấm cúng.
+
+            Bạn có thể thưởng thức những món ăn ngon và thư giãn tại những địa điểm này khi ghé thăm Thiền Viện Trúc Lâm Phương Nam.
+    
+    utter_ask_hotel_thienvientruc:
+        - text: |
+            Gần Thiền Viện Trúc Lâm Phương Nam, có nhiều lựa chọn lưu trú cho du khách. Dưới đây là danh sách 6 nhà nghỉ và khách sạn mà bạn có thể tham khảo:
+
+            **Nhóm nhà nghỉ, khách sạn bình dân
+
+            1.Nhà nghỉ Trúc Lâm
+                Giá thuê: khoảng 300.000 - 500.000 VNĐ/đêm.
+                Địa chỉ: Số 20, Đường Trúc Lâm, gần Thiền Viện.
+                Mô tả: Nhà nghỉ thoải mái, giá cả hợp lý, gần gũi với thiên nhiên.
+            2.Khách sạn Thanh Bình
+                Giá thuê: khoảng 400.000 - 600.000 VNĐ/đêm.
+                Địa chỉ: Số 10, Đường Quốc Lộ 1A, gần Thiền Viện.
+                Mô tả: Khách sạn nhỏ, phục vụ các dịch vụ cơ bản, thân thiện và dễ chịu.
+            3.Nhà nghỉ Phương Nam
+                Giá thuê: khoảng 350.000 - 550.000 VNĐ/đêm.
+                Địa chỉ: Số 5, Đường Đỗ Ngọc, gần Thiền Viện.
+                Mô tả: Nơi nghỉ chân dễ chịu với không gian yên tĩnh, thích hợp cho các gia đình và người đi hành hương.
+
+            **Nhóm khách sạn cao cấp
+            4.Khách sạn Victoria Cần Thơ
+                Giá thuê: khoảng 1.500.000 - 2.500.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường 30/4, gần Thiền Viện.
+                Mô tả: Khách sạn sang trọng, phục vụ nhiều món ăn đặc sản và có không gian thư giãn thoải mái.
+            5.Khách sạn Mường Thanh Cần Thơ
+                Giá thuê: khoảng 1.200.000 - 2.000.000 VNĐ/đêm.
+                Địa chỉ: Số 60, Đường 30/4, gần Thiền Viện.
+                Mô tả: Khách sạn cao cấp với thiết kế hiện đại, nhiều tiện nghi và dịch vụ chất lượng.
+            6.Khách sạn Đông Dương
+                Giá thuê: khoảng 1.000.000 - 1.800.000 VNĐ/đêm.
+                Địa chỉ: Số 24, Đường Trần Hưng Đạo, gần Thiền Viện.
+                Mô tả: Khách sạn đẳng cấp với dịch vụ hoàn hảo và nhiều tiện ích cho du khách.
+
+            Bạn có thể lựa chọn các nhà nghỉ và khách sạn phù hợp với nhu cầu và ngân sách của mình khi đến thăm Thiền Viện Trúc Lâm Phương Nam.
+    utter_thienvientruc_hotel_duoi_1trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Nhà nghỉ Trúc Lâm
+                Giá thuê: khoảng 300.000 - 500.000 VNĐ/đêm.
+                Địa chỉ: Số 20, Đường Trúc Lâm, gần Thiền Viện.
+                Mô tả: Nhà nghỉ thoải mái, giá cả hợp lý, gần gũi với thiên nhiên.
+            2.Khách sạn Thanh Bình
+                Giá thuê: khoảng 400.000 - 600.000 VNĐ/đêm.
+                Địa chỉ: Số 10, Đường Quốc Lộ 1A, gần Thiền Viện.
+                Mô tả: Khách sạn nhỏ, phục vụ các dịch vụ cơ bản, thân thiện và dễ chịu.
+            3.Nhà nghỉ Phương Nam
+                Giá thuê: khoảng 350.000 - 550.000 VNĐ/đêm.
+                Địa chỉ: Số 5, Đường Đỗ Ngọc, gần Thiền Viện.
+                Mô tả: Nơi nghỉ chân dễ chịu với không gian yên tĩnh, thích hợp cho các gia đình và người đi hành hương.
+    utter_thienvientruc_hotel_duoi_3trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Khách sạn Victoria Cần Thơ
+                Giá thuê: khoảng 1.500.000 - 2.500.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường 30/4, gần Thiền Viện.
+                Mô tả: Khách sạn sang trọng, phục vụ nhiều món ăn đặc sản và có không gian thư giãn thoải mái.
+            2.Khách sạn Mường Thanh Cần Thơ
+                Giá thuê: khoảng 1.200.000 - 2.000.000 VNĐ/đêm.
+                Địa chỉ: Số 60, Đường 30/4, gần Thiền Viện.
+                Mô tả: Khách sạn cao cấp với thiết kế hiện đại, nhiều tiện nghi và dịch vụ chất lượng.
+            3.Khách sạn Đông Dương
+                Giá thuê: khoảng 1.000.000 - 1.800.000 VNĐ/đêm.
+                Địa chỉ: Số 24, Đường Trần Hưng Đạo, gần Thiền Viện.
+                Mô tả: Khách sạn đẳng cấp với dịch vụ hoàn hảo và nhiều tiện ích cho du khách.
+    utter_thienvientruc_hotel_tren_3trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Khách sạn Victoria Cần Thơ
+                Giá thuê: khoảng 3.200.000 - 4.500.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường 30/4, gần Thiền Viện.
+                Mô tả: Khách sạn sang trọng với thiết kế tinh tế, phục vụ đa dạng món ăn và có nhiều dịch vụ giải trí.
+            2.Khách sạn Mường Thanh Luxury Cần Thơ
+                Giá thuê: khoảng 3.000.000 - 4.000.000 VNĐ/đêm.
+                Địa chỉ: Số 60, Đường 30/4, gần Thiền Viện.
+                Mô tả: Khách sạn cao cấp với nhiều tiện nghi hiện đại và dịch vụ chuyên nghiệp, mang đến trải nghiệm lưu trú tuyệt vời.
+            3.Khách sạn Đông Dương
+                Giá thuê: khoảng 3.500.000 - 5.000.000 VNĐ/đêm.
+                Địa chỉ: Số 24, Đường Trần Hưng Đạo, gần Thiền Viện.
+                Mô tả: Khách sạn đẳng cấp với dịch vụ hoàn hảo và nhiều tiện ích cho du khách.
+
+    utter_ask_hotel_langmykhanh:
+        - text: |
+            Gần Làng Du Lịch Mỹ Khánh, có nhiều lựa chọn lưu trú cho du khách. Dưới đây là danh sách 6 nhà nghỉ và khách sạn mà bạn có thể tham khảo:
+
+            **Nhóm nhà nghỉ, khách sạn bình dân
+
+            1.Nhà nghỉ Mỹ Khánh
+                Giá thuê: khoảng 300.000 - 500.000 VNĐ/đêm.
+                Địa chỉ: Số 15, Đường Mỹ Khánh, gần Làng Du Lịch.
+                Mô tả: Nhà nghỉ bình dân, giá cả hợp lý, cung cấp dịch vụ cơ bản và không gian thoải mái.
+            2.Khách sạn Cần Thơ
+                Giá thuê: khoảng 400.000 - 600.000 VNĐ/đêm.
+                Địa chỉ: Số 5, Đường Quốc Lộ 1A, gần Làng Du Lịch.
+                Mô tả: Khách sạn nhỏ, thân thiện với dịch vụ ấm cúng, thích hợp cho gia đình và nhóm bạn.
+            3.Nhà nghỉ Phú Mỹ
+                Giá thuê: khoảng 350.000 - 550.000 VNĐ/đêm.
+                Địa chỉ: Số 10, Đường Nông Thôn, gần Làng Du Lịch.
+                Mô tả: Nơi nghỉ chân với giá cả phải chăng, phục vụ bữa sáng và các tiện nghi cơ bản.
+
+            **Nhóm khách sạn cao cấp
+
+            4.Khách sạn Victoria Mỹ Tho
+                Giá thuê: khoảng 1.500.000 - 2.500.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường 30/4, gần Làng Du Lịch.
+                Mô tả: Khách sạn sang trọng với thiết kế tinh tế, phục vụ đa dạng món ăn và có nhiều dịch vụ giải trí.
+            5.Khách sạn Mường Thanh Cần Thơ
+                Giá thuê: khoảng 1.200.000 - 2.000.000 VNĐ/đêm.
+                Địa chỉ: Số 60, Đường 30/4, gần Làng Du Lịch.
+                Mô tả: Khách sạn cao cấp, có các phòng nghỉ hiện đại và nhiều tiện nghi cho du khách.
+            6.Khách sạn Đông Dương
+                Giá thuê: khoảng 1.000.000 - 1.800.000 VNĐ/đêm.
+                Địa chỉ: Số 24, Đường Trần Hưng Đạo, gần Làng Du Lịch.
+                Mô tả: Khách sạn đẳng cấp, cung cấp dịch vụ hoàn hảo và không gian thư giãn lý tưởng.
+
+            Bạn có thể lựa chọn các nhà nghỉ và khách sạn phù hợp với nhu cầu và ngân sách của mình khi đến thăm Làng Du Lịch Mỹ Khánh.
+    utter_langmykhanh_hotel_duoi_1trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Nhà nghỉ Mỹ Khánh
+                    Giá thuê: khoảng 300.000 - 500.000 VNĐ/đêm.
+                    Địa chỉ: Số 15, Đường Mỹ Khánh, gần Làng Du Lịch.
+                    Mô tả: Nhà nghỉ bình dân, giá cả hợp lý, cung cấp dịch vụ cơ bản và không gian thoải mái.
+            2.Khách sạn Cần Thơ
+                Giá thuê: khoảng 400.000 - 600.000 VNĐ/đêm.
+                Địa chỉ: Số 5, Đường Quốc Lộ 1A, gần Làng Du Lịch.
+                Mô tả: Khách sạn nhỏ, thân thiện với dịch vụ ấm cúng, thích hợp cho gia đình và nhóm bạn.
+            3.Nhà nghỉ Phú Mỹ
+                Giá thuê: khoảng 350.000 - 550.000 VNĐ/đêm.
+                Địa chỉ: Số 10, Đường Nông Thôn, gần Làng Du Lịch.
+                Mô tả: Nơi nghỉ chân với giá cả phải chăng, phục vụ bữa sáng và các tiện nghi cơ bản.
+    utter_langmykhanh_hotel_duoi_3trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Khách sạn Victoria Mỹ Tho
+                Giá thuê: khoảng 1.500.000 - 2.500.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường 30/4, gần Làng Du Lịch.
+                Mô tả: Khách sạn sang trọng với thiết kế tinh tế, phục vụ đa dạng món ăn và có nhiều dịch vụ giải trí.
+            2.Khách sạn Mường Thanh Cần Thơ
+                Giá thuê: khoảng 1.200.000 - 2.000.000 VNĐ/đêm.
+                Địa chỉ: Số 60, Đường 30/4, gần Làng Du Lịch.
+                Mô tả: Khách sạn cao cấp, có các phòng nghỉ hiện đại và nhiều tiện nghi cho du khách.
+            3.Khách sạn Đông Dương
+                Giá thuê: khoảng 1.000.000 - 1.800.000 VNĐ/đêm.
+                Địa chỉ: Số 24, Đường Trần Hưng Đạo, gần Làng Du Lịch.
+                Mô tả: Khách sạn đẳng cấp, cung cấp dịch vụ hoàn hảo và không gian thư giãn lý tưởng.
+    utter_langmykhanh_hotel_tren_3trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Khách sạn Victoria Mỹ Tho
+                Giá thuê: khoảng 3.500.000 - 4.500.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường 30/4, gần Làng Du Lịch.
+                Mô tả: Khách sạn sang trọng với thiết kế hiện đại, phục vụ đa dạng món ăn và nhiều dịch vụ giải trí, không gian thư giãn thoải mái.
+            2.Khách sạn Mường Thanh Cần Thơ
+                Giá thuê: khoảng 3.000.000 - 4.000.000 VNĐ/đêm.
+                Địa chỉ: Số 60, Đường 30/4, gần Làng Du Lịch.
+                Mô tả: Khách sạn cao cấp với thiết kế hiện đại và nhiều tiện nghi cho du khách.
+            3.Khách sạn Ninh Kiều Riverside
+                Giá thuê: khoảng 3.200.000 - 5.000.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường Hòa Bình, gần Làng Du Lịch.
+                Mô tả: Khách sạn đẳng cấp với tầm nhìn ra sông, cung cấp dịch vụ cao cấp và các món ăn đặc sản.
+
+    utter_ask_hotel_benninhkieu:
+        - text: |
+            Gần Bến Ninh Kiều, có nhiều lựa chọn lưu trú cho du khách. Dưới đây là danh sách 6 nhà nghỉ và khách sạn mà bạn có thể tham khảo:
+
+            **Nhóm nhà nghỉ, khách sạn bình dân:
+            1.Nhà nghỉ Bến Ninh Kiều
+                Giá thuê: khoảng 300.000 - 500.000 VNĐ/đêm.
+                Địa chỉ: Số 12, Đường Trần Hưng Đạo, gần Bến Ninh Kiều.
+                Mô tả: Nhà nghỉ thoải mái, giá cả hợp lý, thuận tiện cho việc tham quan các điểm du lịch.
+            2.Khách sạn Xuân Khánh
+                Giá thuê: khoảng 250.000 - 450.000 VNĐ/đêm.
+                Địa chỉ: Số 28, Đường Lê Lai, gần Bến Ninh Kiều.
+                Mô tả: Khách sạn nhỏ, phục vụ các dịch vụ cơ bản, thích hợp cho các gia đình và nhóm bạn.
+            3.Nhà nghỉ Thành Công
+                Giá thuê: khoảng 350.000 - 600.000 VNĐ/đêm.
+                Địa chỉ: Số 9, Đường Nguyễn Thị Minh Khai, gần Bến Ninh Kiều.
+                Mô tả: Nơi nghỉ chân bình dân, có bữa sáng miễn phí và không gian thân thiện.
+
+                **Nhóm khách sạn cao cấp:
+            4.Khách sạn Ninh Kiều Riverside
+                Giá thuê: khoảng 1.200.000 - 2.000.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường Hòa Bình, gần Bến Ninh Kiều.
+                Mô tả: Khách sạn sang trọng với tầm nhìn ra sông, cung cấp dịch vụ cao cấp và các món ăn đặc sản.
+            5.Khách sạn Vinpearl Cần Thơ
+                Giá thuê: khoảng 2.500.000 - 4.000.000 VNĐ/đêm.
+                Địa chỉ: Số 31, Đường Đinh Tiên Hoàng, gần Bến Ninh Kiều.
+                Mô tả: Khách sạn 5 sao đẳng cấp, nhiều tiện nghi hiện đại, thích hợp cho những ai tìm kiếm sự sang trọng.
+            6.Khách sạn Mường Thanh Cần Thơ
+                Giá thuê: khoảng 1.000.000 - 1.800.000 VNĐ/đêm.
+                Địa chỉ: Số 60, Đường 30/4, gần Bến Ninh Kiều.
+                Mô tả: Khách sạn cao cấp với thiết kế hiện đại và dịch vụ chuyên nghiệp, mang đến trải nghiệm lưu trú tuyệt vời.
+
+            Bạn có thể lựa chọn các nhà nghỉ và khách sạn phù hợp với nhu cầu và ngân sách của mình khi đến thăm Bến Ninh Kiều.
+    utter_benninhkieu_hotel_duoi_1trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Nhà nghỉ Bến Ninh Kiều
+                Giá thuê: khoảng 300.000 - 500.000 VNĐ/đêm.
+                Địa chỉ: Số 12, Đường Trần Hưng Đạo, gần Bến Ninh Kiều.
+                Mô tả: Nhà nghỉ thoải mái, giá cả hợp lý, thuận tiện cho việc tham quan các điểm du lịch.
+            2.Khách sạn Xuân Khánh
+                Giá thuê: khoảng 250.000 - 450.000 VNĐ/đêm.
+                Địa chỉ: Số 28, Đường Lê Lai, gần Bến Ninh Kiều.
+                Mô tả: Khách sạn nhỏ, phục vụ các dịch vụ cơ bản, thích hợp cho các gia đình và nhóm bạn.
+            3.Nhà nghỉ Thành Công
+                Giá thuê: khoảng 350.000 - 600.000 VNĐ/đêm.
+                Địa chỉ: Số 9, Đường Nguyễn Thị Minh Khai, gần Bến Ninh Kiều.
+                Mô tả: Nơi nghỉ chân bình dân, có bữa sáng miễn phí và không gian thân thiện.
+    utter_benninhkieu_hotel_duoi_3trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Khách sạn Ninh Kiều Riverside
+                Giá thuê: khoảng 1.200.000 - 2.000.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường Hòa Bình, gần Bến Ninh Kiều.
+                Mô tả: Khách sạn sang trọng với tầm nhìn ra sông, cung cấp dịch vụ cao cấp và các món ăn đặc sản.
+            2.Khách sạn Vinpearl Cần Thơ
+                Giá thuê: khoảng 2.500.000 - 3.000.000 VNĐ/đêm.
+                Địa chỉ: Số 31, Đường Đinh Tiên Hoàng, gần Bến Ninh Kiều.
+                Mô tả: Khách sạn 5 sao đẳng cấp, nhiều tiện nghi hiện đại, thích hợp cho những ai tìm kiếm sự sang trọng.
+            3.Khách sạn Mường Thanh Cần Thơ
+                Giá thuê: khoảng 1.000.000 - 1.800.000 VNĐ/đêm.
+                Địa chỉ: Số 60, Đường 30/4, gần Bến Ninh Kiều.
+                Mô tả: Khách sạn cao cấp với thiết kế hiện đại và dịch vụ chuyên nghiệp, mang đến trải nghiệm lưu trú tuyệt vời.
+    utter_benninhkieu_hotel_tren_3trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Khách sạn Vinpearl Cần Thơ
+                Giá thuê: khoảng 3.500.000 - 5.000.000 VNĐ/đêm.
+                Địa chỉ: Số 31, Đường Đinh Tiên Hoàng, gần Bến Ninh Kiều.
+                Mô tả: Khách sạn 5 sao đẳng cấp với nhiều tiện nghi hiện đại, phục vụ đa dạng món ăn và dịch vụ chất lượng cao.
+            2.Khách sạn Ninh Kiều Riverside
+                Giá thuê: khoảng 3.000.000 - 4.500.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường Hòa Bình, gần Bến Ninh Kiều.
+                Mô tả: Khách sạn sang trọng với tầm nhìn ra sông, cung cấp dịch vụ cao cấp và các món ăn đặc sản.
+            3.Khách sạn Mường Thanh Cần Thơ
+                Giá thuê: khoảng 3.200.000 - 4.000.000 VNĐ/đêm.
+                Địa chỉ: Số 60, Đường 30/4, gần Bến Ninh Kiều.
+                Mô tả: Khách sạn cao cấp với thiết kế hiện đại và dịch vụ chuyên nghiệp, mang đến trải nghiệm lưu trú tuyệt vời.
+
+    utter_ask_hotel_chonoicairang:
+        - text: |
+            Gần Chợ Nổi Cái Răng, có nhiều lựa chọn lưu trú cho du khách. Dưới đây là danh sách 6 nhà nghỉ và khách sạn mà bạn có thể tham khảo:
+
+            **Nhóm nhà nghỉ, khách sạn bình dân:
+            1.Nhà nghỉ Cái Răng
+                Giá thuê: khoảng 300.000 - 500.000 VNĐ/đêm.
+                Địa chỉ: Số 20, Đường Nguyễn Văn Cừ, gần Chợ Nổi.
+                Mô tả: Nhà nghỉ giá cả phải chăng, phục vụ các dịch vụ cơ bản, thuận tiện cho việc tham quan.
+            2.Khách sạn Cái Răng
+                Giá thuê: khoảng 250.000 - 400.000 VNĐ/đêm.
+                Địa chỉ: Số 35, Đường Đặng Thái Thân, gần Chợ Nổi.
+                Mô tả: Khách sạn nhỏ và ấm cúng, phù hợp cho những chuyến đi ngắn ngày.
+            3.Nhà nghỉ Hòa Bình
+                Giá thuê: khoảng 300.000 - 450.000 VNĐ/đêm.
+                Địa chỉ: Số 15, Đường Lê Hồng Phong, gần Chợ Nổi.
+                Mô tả: Nơi nghỉ bình dân với không gian thoải mái và dịch vụ thân thiện.
+
+            **Nhóm khách sạn cao cấp:
+            4.Khách sạn Victoria Can Tho
+                Giá thuê: khoảng 1.500.000 - 2.500.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường Hòa Bình, gần Chợ Nổi.
+                Mô tả: Khách sạn 4 sao sang trọng với dịch vụ chuyên nghiệp và không gian thư giãn tuyệt vời.
+            5.Khách sạn Ninh Kiều Riverside
+                Giá thuê: khoảng 1.200.000 - 2.000.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường Hòa Bình, gần Chợ Nổi.
+                Mô tả: Khách sạn cao cấp với tầm nhìn đẹp ra sông Hậu, cung cấp dịch vụ ẩm thực phong phú.
+            6.Khách sạn Mường Thanh Cần Thơ
+                Giá thuê: khoảng 1.000.000 - 1.800.000 VNĐ/đêm.
+                Địa chỉ: Số 60, Đường 30/4, gần Chợ Nổi.
+                Mô tả: Khách sạn 5 sao với nhiều tiện nghi hiện đại, mang đến trải nghiệm lưu trú hoàn hảo.
+
+            Bạn có thể lựa chọn các nhà nghỉ và khách sạn phù hợp với nhu cầu và ngân sách của mình khi đến thăm Chợ Nổi Cái Răng.
+    utter_chonoicairang_hotel_duoi_1trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Nhà nghỉ Cái Răng
+                Giá thuê: khoảng 300.000 - 500.000 VNĐ/đêm.
+                Địa chỉ: Số 20, Đường Nguyễn Văn Cừ, gần Chợ Nổi.
+                Mô tả: Nhà nghỉ giá cả phải chăng, phục vụ các dịch vụ cơ bản, thuận tiện cho việc tham quan.
+            2.Khách sạn Cái Răng
+                Giá thuê: khoảng 250.000 - 400.000 VNĐ/đêm.
+                Địa chỉ: Số 35, Đường Đặng Thái Thân, gần Chợ Nổi.
+                Mô tả: Khách sạn nhỏ và ấm cúng, phù hợp cho những chuyến đi ngắn ngày.
+            3.Nhà nghỉ Hòa Bình
+                Giá thuê: khoảng 300.000 - 450.000 VNĐ/đêm.
+                Địa chỉ: Số 15, Đường Lê Hồng Phong, gần Chợ Nổi.
+                Mô tả: Nơi nghỉ bình dân với không gian thoải mái và dịch vụ thân thiện.
+    utter_chonoicairang_hotel_duoi_3trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Khách sạn Victoria Can Tho
+                Giá thuê: khoảng 1.500.000 - 2.500.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường Hòa Bình, gần Chợ Nổi.
+                Mô tả: Khách sạn 4 sao sang trọng với dịch vụ chuyên nghiệp và không gian thư giãn tuyệt vời.
+            2.Khách sạn Ninh Kiều Riverside
+                Giá thuê: khoảng 1.200.000 - 2.000.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường Hòa Bình, gần Chợ Nổi.
+                Mô tả: Khách sạn cao cấp với tầm nhìn đẹp ra sông Hậu, cung cấp dịch vụ ẩm thực phong phú.
+            3.Khách sạn Mường Thanh Cần Thơ
+                Giá thuê: khoảng 1.000.000 - 1.800.000 VNĐ/đêm.
+                Địa chỉ: Số 60, Đường 30/4, gần Chợ Nổi.
+                Mô tả: Khách sạn 5 sao với nhiều tiện nghi hiện đại, mang đến trải nghiệm lưu trú hoàn hảo.
+    utter_chonoicairang_hotel_tren_3trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Khách sạn Victoria Can Tho
+                Giá thuê: khoảng 3.200.000 - 4.500.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường Hòa Bình, gần Chợ Nổi.
+                Mô tả: Khách sạn 4 sao sang trọng với dịch vụ chuyên nghiệp và không gian thư giãn tuyệt vời, phục vụ đa dạng món ăn đặc sản.
+            2.Khách sạn Ninh Kiều Riverside
+                Giá thuê: khoảng 3.000.000 - 4.500.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường Hòa Bình, gần Chợ Nổi.
+                Mô tả: Khách sạn cao cấp với tầm nhìn đẹp ra sông Hậu, cung cấp dịch vụ ẩm thực phong phú.
+            3.Khách sạn Mường Thanh Cần Thơ
+                Giá thuê: khoảng 3.200.000 - 4.000.000 VNĐ/đêm.
+                Địa chỉ: Số 60, Đường 30/4, gần Chợ Nổi.
+                Mô tả: Khách sạn 5 sao với nhiều tiện nghi hiện đại, mang đến trải nghiệm lưu trú hoàn hảo.
+
+    utter_ask_vehicle_thienvientruc:
+        - text: |
+            Để di chuyển đến Thiền Viện Trúc Lâm Phương Nam, du khách có thể lựa chọn các phương tiện sau:
+
+            **1. Xe máy hoặc xe đạp**:
+            - Phương tiện phổ biến cho những du khách muốn tự mình khám phá. 
+            - Bạn có thể thuê xe máy hoặc xe đạp từ trung tâm Cần Thơ và di chuyển khoảng 15km đến Thiền Viện.
+            - Đường đi khá đẹp, qua các làng quê và cánh đồng lúa xanh mát.
+
+            **2. Taxi hoặc ô tô riêng**:
+            - Nếu đi theo gia đình hoặc nhóm bạn, taxi hoặc ô tô riêng là lựa chọn thuận tiện. 
+            - Từ trung tâm Cần Thơ, bạn chỉ mất khoảng 30 phút di chuyển bằng taxi để đến thiền viện.
+
+            **3. Xe buýt**:
+            - Xe buýt là phương tiện công cộng tiết kiệm chi phí. 
+            - Bạn có thể bắt các tuyến xe buýt từ trung tâm Cần Thơ đến khu vực Phong Điền và sau đó di chuyển bằng xe ôm hoặc taxi đến Thiền Viện.
+
+            Mỗi phương tiện đều phù hợp với nhu cầu và sở thích riêng, mang đến trải nghiệm thoải mái cho chuyến hành trình của bạn.
+    utter_ask_vehicle_langmykhanh:
+        - text: |
+            Để di chuyển đến Làng Du Lịch Mỹ Khánh, du khách có thể lựa chọn các phương tiện sau:
+
+            **1. Xe máy hoặc xe đạp**:
+            - Xe máy hoặc xe đạp là lựa chọn phổ biến cho những ai muốn tự do khám phá.
+            - Bạn có thể thuê xe máy hoặc xe đạp từ trung tâm Cần Thơ và di chuyển khoảng 10-12km để đến Mỹ Khánh.
+            - Đường đi rộng rãi, thoáng mát, qua các khu vực làng quê yên bình.
+
+            **2. Taxi hoặc ô tô riêng**:
+            - Nếu bạn đi cùng gia đình hoặc theo nhóm, taxi hoặc ô tô riêng là phương tiện tiện lợi và nhanh chóng.
+            - Từ trung tâm Cần Thơ, chỉ mất khoảng 20-30 phút di chuyển bằng taxi đến Làng Du Lịch Mỹ Khánh.
+
+            **3. Xe buýt**:
+            - Nếu muốn tiết kiệm chi phí, xe buýt là lựa chọn phù hợp.
+            - Bạn có thể bắt các tuyến xe buýt từ trung tâm thành phố đến khu vực Phong Điền, sau đó đi xe ôm hoặc taxi để đến làng du lịch.
+
+            Dù chọn phương tiện nào, bạn cũng sẽ có cơ hội tận hưởng cảnh đẹp của miền quê sông nước Cần Thơ trong hành trình của mình.
+    utter_ask_vehicle_benninhkieu:
+        - text: |
+            Để di chuyển đến Bến Ninh Kiều, du khách có thể sử dụng các phương tiện sau:
+
+            **1. Xe máy hoặc xe đạp**:
+            - Phương tiện linh hoạt cho những ai thích tự mình khám phá.
+            - Bạn có thể thuê xe máy hoặc xe đạp từ nhiều cửa hàng trong thành phố Cần Thơ và dễ dàng di chuyển đến Bến Ninh Kiều. 
+            - Cung đường ngắn, thuận tiện và có thể dừng chân ngắm cảnh ven sông.
+
+            **2. Taxi hoặc ô tô riêng**:
+            - Taxi hoặc ô tô riêng là lựa chọn thuận tiện, đặc biệt khi đi theo nhóm hoặc gia đình.
+            - Bạn có thể đặt xe qua các ứng dụng đặt xe phổ biến như Grab, Be,... hoặc bắt taxi từ bất kỳ đâu trong thành phố.
+
+            **3. Xe buýt**:
+            - Xe buýt là phương tiện công cộng tiết kiệm chi phí.
+            - Có nhiều tuyến xe buýt từ các khu vực lân cận và trung tâm thành phố di chuyển đến Bến Ninh Kiều.
+
+            **4. Thuyền**:
+            - Nếu bạn muốn trải nghiệm cảm giác di chuyển trên sông nước, thuyền là một lựa chọn thú vị.
+            - Bạn có thể thuê thuyền từ các bến tàu gần đó hoặc tham gia các tour du lịch đường sông để đến Bến Ninh Kiều.
+
+            Tùy theo sở thích và nhu cầu của bạn, mỗi phương tiện sẽ mang lại một trải nghiệm khác nhau khi khám phá Bến Ninh Kiều.
+    utter_ask_vehicle_chonoicairang:
+        - text: |
+            Để di chuyển đến Chợ Nổi Cái Răng, du khách có thể lựa chọn các phương tiện sau:
+
+            **1. Thuyền**:
+            - Đây là phương tiện phổ biến nhất để khám phá Chợ Nổi Cái Răng.
+            - Bạn có thể thuê thuyền từ Bến Ninh Kiều hoặc các bến gần đó để đi dọc theo sông Hậu và tham quan chợ nổi. Chuyến đi thuyền mang đến trải nghiệm thú vị khi ngắm nhìn khung cảnh sông nước và các hoạt động giao thương đặc trưng trên ghe thuyền.
+
+            **2. Taxi hoặc ô tô riêng**:
+            - Nếu bạn muốn tiện lợi hơn, taxi hoặc ô tô riêng sẽ đưa bạn từ trung tâm Cần Thơ đến bến thuyền.
+            - Từ đây, bạn có thể tiếp tục thuê thuyền để khám phá chợ nổi.
+
+            **3. Xe máy hoặc xe đạp**:
+            - Bạn cũng có thể tự mình di chuyển bằng xe máy hoặc xe đạp từ trung tâm thành phố đến bến thuyền. 
+            - Sau đó thuê thuyền để tham quan chợ nổi. Cung đường không quá xa và rất thuận tiện.
+
+            Mỗi phương tiện đều mang lại trải nghiệm riêng biệt, giúp bạn dễ dàng khám phá chợ nổi và tận hưởng không khí miền sông nước Cần Thơ.
+    utter_default:
+        - text: "LLM_predict"
+
+    utter_ask_vuonco:
+        - text: |
+            Bạn có thể tham khảo trước các dịch vụ ở Vườn Cò Bằng Lăng tại [đây](https://vinpearl.com/vi/thien-vien-truc-lam-phuong-nam-can-tho-chon-tam-linh-thanh-tinh) còn thắc mắc nào sau khi tham khảo hãy nói với tôi
+    utter_ask_restaurant_vuonco:
+        - text: |
+            Gần Vườn Cò Bằng Lăng, có nhiều quán ăn và nhà hàng phục vụ các món ăn ngon. Dưới đây là danh sách 10 địa điểm mà bạn có thể tham khảo:
+
+            **Nhóm nhà hàng bình dân:**
+
+            1. **Quán Cơm Gà Bằng Lăng**  
+                - **Địa chỉ**: Số 1, Đường Đỗ Hữu Phương, gần Vườn Cò.  
+                - **Mô tả**: Cơm gà tươi ngon, hương vị đậm đà, giá cả phải chăng.
+
+            2. **Quán Bánh Canh Cua**  
+                - **Địa chỉ**: Số 10, Đường Nguyễn Văn Thoại, gần Vườn Cò.  
+                - **Mô tả**: Món bánh canh cua thơm ngon, nước dùng thanh ngọt.
+
+            3. **Quán Cháo Vịt**  
+                - **Địa chỉ**: Số 15, Đường Lê Thánh Tôn, gần Vườn Cò.  
+                - **Mô tả**: Cháo vịt nóng hổi, thích hợp cho bữa sáng hoặc chiều.
+
+            4. **Quán Mì Quảng**  
+                - **Địa chỉ**: Số 8, Đường Phạm Ngọc Thạch, gần Vườn Cò.  
+                - **Mô tả**: Mì Quảng với nhiều loại topping, hương vị thơm ngon.
+
+            5. **Quán Hủ Tiếu**  
+                - **Địa chỉ**: Số 3, Đường Trần Phú, gần Vườn Cò.  
+                - **Mô tả**: Hủ tiếu với nước dùng thơm ngon, phục vụ nhanh chóng.
+
+            **Nhóm nhà hàng cao cấp:**
+
+            6. **Nhà hàng Bằng Lăng**  
+                - **Địa chỉ**: Khu du lịch Vườn Cò Bằng Lăng, gần Vườn Cò.  
+                - **Mô tả**: Nhà hàng sang trọng phục vụ các món ăn đặc sản miền Tây, không gian yên tĩnh và thoáng đãng.
+
+            7. **Nhà hàng Cò Bay**  
+                - **Địa chỉ**: Số 20, Đường Hậu Giang, gần Vườn Cò.  
+                - **Mô tả**: Nhà hàng ven sông với không gian lãng mạn, phục vụ hải sản tươi sống.
+
+            8. **Nhà hàng Sen Vàng**  
+                - **Địa chỉ**: Khu du lịch Sen Vàng, gần Vườn Cò.  
+                - **Mô tả**: Phục vụ đa dạng món ăn từ miền Tây và ẩm thực quốc tế, không gian sang trọng.
+
+            9. **Nhà hàng Ngọc Lan**  
+                - **Địa chỉ**: Số 25, Đường Nguyễn Thị Minh Khai, gần Vườn Cò.  
+                - **Mô tả**: Nhà hàng phục vụ món ăn cao cấp, không gian đẹp mắt và dịch vụ chuyên nghiệp.
+
+            10. **Nhà hàng Hoa Nhài**  
+                - **Địa chỉ**: Khu vực gần Vườn Cò, Cần Thơ.  
+                - **Mô tả**: Nhà hàng với các món ăn đặc sản miền Tây, phong cách phục vụ lịch sự và sang trọng.
+
+            Bạn có thể thưởng thức những món ăn ngon và thư giãn tại những địa điểm này khi ghé thăm Vườn Cò Bằng Lăng.
+    utter_ask_hotel_vuonco:
+        - text: |
+            Gần Vườn Cò Bằng Lăng, có nhiều nhà nghỉ và khách sạn phục vụ nhu cầu lưu trú của du khách. Dưới đây là danh sách 6 địa điểm mà bạn có thể tham khảo:
+            **Nhóm nhà nghỉ, khách sạn bình dân:
+            1.Nhà nghỉ Cò Bằng Lăng
+                Giá thuê: khoảng 300.000 - 500.000 VNĐ/đêm.
+                Địa chỉ: Số 10, Đường Bằng Lăng, gần Vườn Cò.
+                Mô tả: Nhà nghỉ thoải mái, giá cả hợp lý, gần gũi với thiên nhiên.
+            2.Khách sạn Hương Sen
+                Giá thuê: khoảng 400.000 - 600.000 VNĐ/đêm.
+                Địa chỉ: Số 25, Đường Quốc Lộ 1A, gần Vườn Cò.
+                Mô tả: Khách sạn nhỏ, phục vụ các dịch vụ cơ bản, thân thiện và dễ chịu.
+            3.Nhà nghỉ Bằng Lăng
+                Giá thuê: khoảng 350.000 - 550.000 VNĐ/đêm.
+                Địa chỉ: Số 15, Đường Nông Thôn, gần Vườn Cò.
+                Mô tả: Nơi nghỉ chân dễ chịu với không gian xanh mát, thích hợp cho các gia đình.
+
+            **Nhóm khách sạn cao cấp:
+            4.Khách sạn Bằng Lăng Riverside
+                Giá thuê: khoảng 1.200.000 - 2.000.000 VNĐ/đêm.
+                Địa chỉ: Số 1, Đường Bến Cò, gần Vườn Cò.
+                Mô tả: Khách sạn sang trọng ven sông, phục vụ nhiều món ăn đặc sản và có không gian thư giãn thoải mái.
+            5.Khách sạn Vườn Cò
+                Giá thuê: khoảng 1.500.000 - 2.500.000 VNĐ/đêm.
+                Địa chỉ: Số 3, Đường Vườn Cò, gần Vườn Cò.
+                Mô tả: Khách sạn cao cấp với thiết kế hiện đại, nhiều tiện nghi và dịch vụ chất lượng.
+            6.Khách sạn Ánh Dương
+                Giá thuê: khoảng 1.000.000 - 1.800.000 VNĐ/đêm.
+                Địa chỉ: Số 8, Đường Nguyễn Trãi, gần Vườn Cò.
+                Mô tả: Khách sạn đẳng cấp với dịch vụ hoàn hảo và nhiều tiện ích cho du khách.
+
+            Bạn có thể lựa chọn các nhà nghỉ và khách sạn phù hợp với nhu cầu và ngân sách của mình khi đến thăm Vườn Cò Bằng Lăng.   
+    utter_vuonco_hotel_duoi_1trieu:
+        - text : |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Nhà nghỉ Cò Bằng Lăng
+                Giá thuê: khoảng 300.000 - 500.000 VNĐ/đêm.
+                Địa chỉ: Số 10, Đường Bằng Lăng, gần Vườn Cò.
+                Mô tả: Nhà nghỉ thoải mái, giá cả hợp lý, gần gũi với thiên nhiên.
+            2.Khách sạn Hương Sen
+                Giá thuê: khoảng 400.000 - 600.000 VNĐ/đêm.
+                Địa chỉ: Số 25, Đường Quốc Lộ 1A, gần Vườn Cò.
+                Mô tả: Khách sạn nhỏ, phục vụ các dịch vụ cơ bản, thân thiện và dễ chịu.
+            3.Nhà nghỉ Bằng Lăng
+                Giá thuê: khoảng 350.000 - 550.000 VNĐ/đêm.
+                Địa chỉ: Số 15, Đường Nông Thôn, gần Vườn Cò.
+                Mô tả: Nơi nghỉ chân dễ chịu với không gian xanh mát, thích hợp cho các gia đình.
+    utter_vuonco_hotel_duoi_3trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Khách sạn Bằng Lăng Riverside
+                .Giá thuê: khoảng 1.200.000 - 2.000.000 VNĐ/đêm.
+                .Địa chỉ: Số 1, Đường Bến Cò, gần Vườn Cò.
+                .Mô tả: Khách sạn sang trọng ven sông, phục vụ nhiều món ăn đặc sản và có không gian thư giãn thoải mái.
+            2.Khách sạn Vườn Cò
+                .Giá thuê: khoảng 1.500.000 - 2.500.000 VNĐ/đêm.
+                .Địa chỉ: Số 3, Đường Vườn Cò, gần Vườn Cò.
+                .Mô tả: Khách sạn cao cấp với thiết kế hiện đại, nhiều tiện nghi và dịch vụ chất lượng.
+            3.Khách sạn Ánh Dương
+                .Giá thuê: khoảng 1.000.000 - 1.800.000 VNĐ/đêm.
+                .Địa chỉ: Số 8, Đường Nguyễn Trãi, gần Vườn Cò.
+                .Mô tả: Khách sạn đẳng cấp với dịch vụ hoàn hảo và nhiều tiện ích cho du khách.
+    utter_vuonco_hotel_tren_3trieu:
+        - text: |
+            Dưới đây là 1 vài gợi ý dành cho bạn :
+            1.Khách sạn Vinpearl Cần Thơ
+                .Giá thuê: khoảng 3.500.000 - 4.500.000 VNĐ/đêm.
+                .Địa chỉ: Số 31, Đường Đinh Tiên Hoàng, gần Vườn Cò.
+                .Mô tả: Khách sạn 5 sao đẳng cấp, với nhiều tiện nghi hiện đại và dịch vụ chất lượng, thích hợp cho du khách muốn trải nghiệm sự sang trọng.
+            2.Khách sạn Victoria Can Tho
+                .Giá thuê: khoảng 3.000.000 - 4.000.000 VNĐ/đêm.
+                .Địa chỉ: Số 1, Đường Hòa Bình, gần Vườn Cò.
+                .Mô tả: Khách sạn sang trọng với dịch vụ cao cấp, thiết kế tinh tế và không gian thư giãn lý tưởng.
+            3.Khách sạn Mường Thanh Luxury Cần Thơ
+                .Giá thuê: khoảng 3.000.000 - 4.000.000 VNĐ/đêm.
+                .Địa chỉ: Số 60, Đường 30/4, gần Vườn Cò.
+                .Mô tả: Khách sạn cao cấp với nhiều tiện ích hiện đại và dịch vụ chuyên nghiệp, mang đến trải nghiệm lưu trú tuyệt vời.
+    utter_ask_vehicle_vuonco:
+        - text: |
+                Dưới đây là các phương tiện di chuyển thuận tiện khi đến Vườn Cò Bằng Lăng:
+
+                **1. Thuyền**:
+                - Phương tiện di chuyển phổ biến nhất để khám phá Vườn Cò Bằng Lăng. 
+                - Du khách có thể thuê thuyền từ bến Ninh Kiều hoặc các bến gần đó. 
+                - Chuyến đi thuyền giúp thưởng thức cảnh sông nước và ngắm nhìn khung cảnh thiên nhiên hoang dã của khu bảo tồn cò.
+
+                **2. Xe máy hoặc xe đạp**:
+                - Đối với những ai thích tự mình khám phá, xe máy hoặc xe đạp là lựa chọn lý tưởng. 
+                - Du khách có thể thuê xe từ trung tâm Cần Thơ và tự lái đến Vườn Cò Bằng Lăng. 
+                - Đường đi khá thoải mái, qua những cánh đồng lúa và làng quê thanh bình.
+
+                **3. Taxi hoặc ô tô**:
+                - Nếu đi cùng gia đình hoặc nhóm bạn, thuê taxi hoặc ô tô riêng là lựa chọn thuận tiện. 
+                - Nhiều dịch vụ taxi có sẵn để đưa du khách từ trung tâm Cần Thơ đến thẳng Vườn Cò Bằng Lăng.
+
+                **4. Xe buýt**:
+                - Phương tiện tiết kiệm chi phí, dễ dàng tiếp cận.
+                - Du khách có thể đi xe buýt từ trung tâm Cần Thơ đến gần khu vực vườn cò, sau đó di chuyển bằng xe ôm hoặc đi bộ vào khu vực vườn.
+
+                Mỗi phương tiện đều mang đến trải nghiệm riêng biệt, phù hợp với sở thích và nhu cầu của du khách.
+
+actions:
+- action_fallback
+- action_extract_location
+
+
+session_config:
+    session_expiration_time: 60  # Thời gian hết hạn phiên (phút)
+    carry_over_slots_to_new_session: true  # Mang theo các slot vào phiên mới
